@@ -7,20 +7,20 @@ const JsonBuilderDemo = () => {
 
   // const input = `){alert(document.cookie)}; with(obj`
 
-  const [title, setTitle] = useState('')
+  const [json, setJson] = useState('')
   const [objectName, setObjectName] = useState('data')
   const [inputName, setInputName] = useState('')
   const [inputLastName, setInputLastname] = useState('')
 
   const onSubmitButton = () => {
 
-    const asd = _.template(`{
+    const jsonTemplate = _.template(`{
       ${objectName}: {
         ${inputName ? `name: '${inputName}',`: ''}
         ${inputLastName ? `lastname: '${inputLastName}'`: ''}
       }
     }`, { variable: objectName })
-    setTitle(asd({name: inputName, lastname: inputLastName}))
+    setJson(jsonTemplate({name: inputName, lastname: inputLastName}))
   }
 
   return (
@@ -56,7 +56,7 @@ const JsonBuilderDemo = () => {
         </div>
         <Button style={{width: '50%'}} onClick={onSubmitButton}>Submit</Button>
       </div>
-      {title}
+      {json}
     </>
   )
 }
