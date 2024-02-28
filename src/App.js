@@ -1,11 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import _ from 'lodash'
+import { useEffect, useState } from 'react';
+import Tab from './Tabs/Tab';
 
 function App() {
+
+  const token = 'this-should-be-secret'
+  const input = 'http://localhost:3001/images/'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      {/* <img src={'http://localhost:3001/js/test.js'} /> */}
+      {/* <header className="App-header">
+        <form 
+          style={{width: '100%'}}
+          onSubmit={(e) => {
+          e.preventDefault()
+          setSubmitted(true)
+        }}>
+          <input style={{width: '100%'}} onChange={e => setValue(e.target.value)}/>
+        </form>
+
+        {submitted && <img src={value} onError={(e) => console.log('error', e)}/>}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,7 +33,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Tab />
     </div>
   );
 }
