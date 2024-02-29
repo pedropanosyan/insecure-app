@@ -2,6 +2,7 @@ import React from "react";
 import { useTabState, Tab as ReakitTab, TabList, TabPanel } from "reakit/Tab";
 import NamePicker from "./JsonBuilderDemo";
 import URLInjection from "./URLInjection";
+import { XssTab } from "./XssTab";
 
 const Tab = () => {
   const tab = useTabState();
@@ -12,7 +13,7 @@ const Tab = () => {
         <ReakitTab {...tab}>
           URL Injection
         </ReakitTab>
-        <ReakitTab {...tab}>Tab 3</ReakitTab>
+        <ReakitTab {...tab}>Xss</ReakitTab>
       </TabList>
       <TabPanel {...tab}>
         <NamePicker />
@@ -20,7 +21,9 @@ const Tab = () => {
       <TabPanel {...tab}>
         <URLInjection />
       </TabPanel>
-      <TabPanel {...tab}>Tab 3</TabPanel>
+      <TabPanel {...tab}>
+        <XssTab />
+      </TabPanel>
     </>
   );
 }

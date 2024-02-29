@@ -25,7 +25,7 @@ const JsonBuilderDemo = () => {
 
   return (
     <>
-      <h1>Welcome JSON builder!</h1>
+      <h1>JSON builderr</h1>
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <div>
           <label>Object name:</label>

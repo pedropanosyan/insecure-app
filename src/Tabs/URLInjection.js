@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input } from 'reakit'
+import { Input, Button } from 'reakit'
 
 const URLInjection = () => {
 
@@ -16,9 +16,10 @@ const URLInjection = () => {
             setSubmitted(true)
         }}>
           <Input style={{width: '100%'}} onChange={e => setValue(e.target.value)}/>
+          <Button style={{width: '50%'}} onClick={() => setSubmitted(true)}>Submit</Button>
         </form>
 
-        {submitted && <img src={value}/>}
+        {submitted && <iframe src={value}/>}
     </div>
   )
 }
