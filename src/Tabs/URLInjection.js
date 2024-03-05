@@ -3,6 +3,7 @@ import { Input, Button } from 'reakit'
 
 const URLInjection = () => {
 
+  // https://9432-161-22-31-212.ngrok-free.app/images/document.cookie
   const [value, setValue] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
@@ -19,7 +20,7 @@ const URLInjection = () => {
           <Button style={{width: '50%'}} onClick={() => setSubmitted(true)}>Submit</Button>
         </form>
 
-        {submitted && <iframe src={value}/>}
+        {submitted && <img src={value}/>}
     </div>
   )
 }

