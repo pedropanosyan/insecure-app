@@ -35,7 +35,7 @@ Open an other console to start the external server
 Runs ExpressJS proyect on [http://localhost:3001], You should run this backend with [ngrok](https://ngrok.com/download) to make sure the attacker server is completely isolated from the frontend (different domain) to simulate more accurately the environment
 
 
-## Task to complete!
+## Tasks!
 
 The idea of this workshop is to cover the vulnerabilities from ALL sides possible. For example, If we're going to fix the xss issue not fixing it only on the javascript side but also preventing the cookies getting grabbed from javascript. I won't tell you HOW to fix the issues, I'll mention the tools to do so.
 Now, without further ado lets go to the tasks
