@@ -114,7 +114,7 @@ What happened here? as you can see, there's a reactJS property called **dangerou
 
 ##### How do we fix this?
 
-Well here is more like a context-dependent solution, in this situation is just picking the style passed by the user and no other value.
+Well here is more like a context-dependent solution. The idea here is to fix de xss and keep the feature to generate the background to our profile image.
 
 
 ### Some extra configuration to take care of
