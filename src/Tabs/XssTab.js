@@ -27,7 +27,7 @@ export const XssTab = () => {
       <h1>Set your profile link</h1>
 
       <Input style={{width: '90%'}} value={value} onChange={(e) => setValue(e.target.value)}/>
-      <a href={value} >Go to your profile</a>
+      <a href={value} >Test profile link</a>
 
       <h1>Customize your profile background</h1>
       <Input style={{width: '90%'}} value={customizedBackground} onChange={(e) => setCustomizedBackground(e.target.value)}/>

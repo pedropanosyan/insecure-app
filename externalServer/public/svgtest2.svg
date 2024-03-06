@@ -7,16 +7,5 @@
   <circle cx="150" cy="100" r="80" fill="green" />
 
   <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
-  <script type="text/javascript">
-    window.addEventListener('mouseover',function(){alert('helloworld')}, false)
-    window.addEventListener('click', function() {alert('helloworld')}, false)
-    window.addEventListener('load',function(){
-        alert("You got owned")
-      document.rootElement.addEventListener('keydown',function(e) {
-        var key = String.fromCharCode(e.keyCode);
-        console.log(key)
-        },false);
-    },false);
-  </script>
 
 </svg>

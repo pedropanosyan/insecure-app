@@ -20,7 +20,7 @@ const URLInjection = () => {
           <Button style={{width: '50%'}} onClick={() => setSubmitted(true)}>Submit</Button>
         </form>
 
-        {submitted && <img src={value}/>}
+        {submitted && <iframe width={'90%'} height={'500px'} src={value}/>}
     </div>
   )
 }

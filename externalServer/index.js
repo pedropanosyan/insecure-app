@@ -38,7 +38,15 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 // this will allow "GET /style.css" instead of "GET /css/style.css":
 app.use(express.static(path.join(__dirname, 'public', 'css')));
 
-app.get('/images/:param', function (req, res) {
+app.get('/imges/nonEvil/:param', function (req, res) {
+  var test = req.params.param;
+  console.log('PARAM', test)
+  console.log('HEADERS', req.headers)
+  res.setHeader('Content-Type', 'image/svg+xml');
+  res.sendFile(__dirname + '/public/svgtest2.svg');
+});
+
+app.get('/images/evil/:param', function (req, res) {
     var test = req.params.param;
     console.log('PARAM', test)
     console.log('HEADERS', req.headers)
