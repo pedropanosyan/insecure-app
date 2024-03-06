@@ -72,8 +72,8 @@ Now lets inject a malicious content, go to the terminal you run ngrok server, co
 **{ngrokUrl}/images/evil/document.cookie**
 
 We'll see the alert prompting again, but what happened?
-If you go to the svg file we're importing here, it has a script inside. And here we're letting the attackers do whatever they want inside that script.
-Big responsible of this is that we're using **iframe** to show the image, if we change that tag on the URLInjection component to **\<img\>**, the image will load but the script won't execute. But the user can say "hey nice image lets take a closer look" and click and open the image on other tab.
+If you go to the svg file we're importing here (look for externalServer/public/svgtest.svg), it has a script inside. And here we're letting the attackers do whatever they want inside that script.
+Big responsible for this is that we're using **iframe** to show the image, if we change that tag on the URLInjection component to **\<img\>**, the image will load but the script won't trigger. But the user can say "hey nice image lets take a closer look" and click and open the image on other tab and puf...
 
 #### How to fix it?
 
@@ -92,18 +92,18 @@ Again, this can seem harmless, but the way this is done is vulnerable to XSS att
 
 #### First Input
 
-On the first input if you make a quick test, try putting **javascript:alert(document.cookie)** and click "test profile linl". You'll see, again, the alert prompt showing our login credentials. 
+On the first input if you make a quick test, try putting **javascript:alert(document.cookie)** and click "test profile link". You'll see, again, the alert prompt showing our login credentials. 
 
 ##### How do we fix this?
 
 First, we SHOULD NOT allow the user to insert javascript values. Never.
 
 Second, what we can do is, like the previous tab, only limit the user for a amount of social media profiles (pick the ones you like most)
-With this two options should be enough, but be carefull, make sure you definitely you're restricting the user. Take note that **javascript:alert(document.cookie)** is not the only attack vector, for example **JaVaScript:alert(document.cookie)**.
+With this two options should be enough, but be carefull, make sure you are definitely restricting the user. Take note that **javascript:alert(document.cookie)** is not the only attack vector, other example is **JaVaScript:alert(document.cookie)**.
 
 #### Second Input
 
-On the second Input, there's also a XSS vulnerability, but from another perspective. From the passing props one.
+On the second Input, there's also a XSS vulnerability, but from another perspective. The passing props one.
 
 Try putting 
 ```
@@ -114,7 +114,7 @@ What happened here? as you can see, there's a reactJS property called **dangerou
 
 ##### How do we fix this?
 
-Well here is more like context-dependent solution, in this situation is just picking the style passed by the user and no other value.
+Well here is more like a context-dependent solution, in this situation is just picking the style passed by the user and no other value.
 
 
 ### Some extra configuration to take care of
