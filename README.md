@@ -5,6 +5,8 @@ The objective is to try to cover each vulnerability as much as possible, this me
 
 Sorry for horribly looking page :(
 
+[Presentation Link](https://docs.google.com/presentation/d/1u1hPA3o-AJzAq4wOKMSPQvxfj8Ur313tgRlQJfKZAp4/edit?usp=sharing)
+
 ## Project content
 
 The project is based of:
