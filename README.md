@@ -34,6 +34,9 @@ Open an other console to start the external server
 ```
 Runs ExpressJS proyect on [http://localhost:3001], You should run this backend with [ngrok](https://ngrok.com/download) to make sure the attacker server is completely isolated from the frontend (different domain) to simulate more accurately the environment
 
+## Before starting
+
+Before starting working the tasks, I'd suggest creating a fork of this project, or cloning is also the same.
 
 ## Tasks!
 
@@ -126,5 +129,16 @@ Take a look to [document.cookie](https://developer.mozilla.org/en-US/docs/Web/AP
 ### Bonus!
 
 Inside this project, when it started, since it was a playground project we commited some sensitive values that cannot be public, and **MUST** be removed. Right now it got removed from the file (More specific in the App.js file) but it remains in the git history.
+
 Github recomends [Git Filter repo](https://github.com/newren/git-filter-repo) to remove files from the history.
 Try to remove the secret value from the git history. 
+
+
+### Delivery terms
+
+After finishing this tasks, you should share the repository to @NicolasMoreno on gitlab or @NicoMorenoSirius on github. 
+Don't forget to send message to him on Slack after finishing!
+
+
+Good luck!
+
