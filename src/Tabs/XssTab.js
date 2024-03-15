@@ -20,14 +20,26 @@ export const XssTab = () => {
     }
   }
 
-  
-  return (
+    const isValidProfileLink = (url) => {
+        const socialMediaPattern = /^(https?:\/\/)?(www\.)?(facebook|twitter|instagram)\.com\/[a-zA-Z0-9_]+$/;
+        return socialMediaPattern.test(url);
+    }
+
+    const testProfileLink = () => {
+        if (isValidProfileLink(value)) {
+            window.location.href = value;
+        } else {
+            alert("Invalid profile link! Please enter a valid social media profile link.");
+        }
+    };
+
+    return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 
       <h1>Set your profile link</h1>
 
       <Input style={{width: '90%'}} value={value} onChange={(e) => setValue(e.target.value)}/>
-      <a href={value} >Test profile link</a>
+      <Button onClick={testProfileLink} >Test profile link</Button>
 
       <h1>Customize your profile background</h1>
       <Input style={{width: '90%'}} value={customizedBackground} onChange={(e) => setCustomizedBackground(e.target.value)}/>
